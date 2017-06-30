@@ -20,7 +20,7 @@ function connect(app, config) {
 	console.log('connect() 호출됨.');
 
 	// 데이터베이스 연결 : config의 설정 사용
-	mongoose.createConnection(config.db_url);
+	mongoose.connect(config.db_url);
 	database.db = mongoose.connection;
 	
 	database.db.on('error', console.error.bind(console, 'mongoose connection error.'));	
