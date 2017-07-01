@@ -28,10 +28,6 @@ var expressErrorHandler = require('express-error-handler');
 var passport = require('passport');
 var flash = require('connect-flash');
 
-
-// 제이슨 사용
-var jayson = require('jayson');
-
 //===== Express 서버 객체 만들기 =====//
 var app = express();
 
@@ -72,10 +68,6 @@ app.use(app.router);
 //라우팅 정보를 읽어들여 라우팅 설정
 route_loader.init(app);
 
-//==== json 관련 라우팅 및 설정 ====// 
-var jsonrpc_api_path = config.jsonrpc_api_path || '/api';
-handler_loader.init(jayson, app, jsonrpc_api_path);
-
 //===== Passport 관련 라우팅 및 설정 =====//
 
 // 패스포트 설정
@@ -85,19 +77,6 @@ configPassport(app, passport);
 //패스포트 관련 함수 라우팅
 var userPassport = require('./routes/user_passport');
 userPassport(app, passport);
-
-
-/*
-var isLoggedIn = function(req, res, next) {
-	console.log('isLoggedIn 미들웨어 호출됨.');
-	
-	if (req.isAuthenticated()) {
-		return next();
-	}
-	
-	res.redirect('/');
-}
-*/
 
 
 //===== 404 에러 페이지 처리 =====//
