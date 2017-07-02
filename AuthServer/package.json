@@ -20,6 +20,7 @@
     "jayson": "^2.0.3",
     "mongodb": "^2.2.5",
     "mongoose": "^4.5.8",
+    "oauth2-server": "^2.4.1",
     "passport": "^0.3.2",
     "passport-facebook": "^2.1.1",
     "passport-google-oauth": "^1.0.0",
