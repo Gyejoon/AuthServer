@@ -15,8 +15,6 @@ var express = require('express')
 var config = require('./config/config');
 var database = require('./database/database');
 var route_loader = require('./routes/route_loader');
-var handler_loader = require('./handlers/handler_loader');
-
 
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
