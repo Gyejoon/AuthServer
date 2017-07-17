@@ -7,8 +7,10 @@ module.exports = {
 	server_port: 3002,
 	db_url: 'mongodb://192.168.0.13:27017/shopping',
 	db_schemas: [
-	    {file:'./user_schema', collection:'users6', schemaName:'UserSchema', modelName:'UserModel'},
-	    {file:'./token_schema', collection:'token_schema', schemaName: 'tokenSchema', modelName:'tokenModel' }
+	    {file:'./user_schema', collection:'oauth1', schemaName:'UserSchema', modelName:'UserModel'},
+	    {file:'./token_schema', collection:'oauth2', schemaName: 'tokenSchema', modelName:'tokenModel' },
+	    {file:'./Oauthclient_schema', collection:'oauth3', schemaName: 'oauthschema', modelName:'oauthClientModel'},
+	    {file:'./authorizecode_schema', collection:'oauth4', schemaName: 'authorizecodeschema', modelName:'authorizecodeModel'},
 	],
 	route_info: [
 		{file : './index', path : '/index/test',method : 'index', type : 'post'}
